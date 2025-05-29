@@ -1,0 +1,13 @@
+- task: Maven@4
+  inputs:
+    azureSubscription: 'Microsoft Azure Sponsorship(52c2b921-4d94-4087-bb57-facccab3ab17)'
+    mavenPomFile: 'pom.xml'
+    publishJUnitResults: true
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    codeCoverageToolOption: 'Cobertura'
+    javaHomeOption: 'JDKVersion'
+    mavenVersionOption: 'Default'
+    mavenAuthenticateFeed: false
+    effectivePomSkip: false
+    sonarQubeRunAnalysis: true
+    sqMavenPluginVersionChoice: 'latest'
