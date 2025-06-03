@@ -1,8 +1,7 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* Optional scrollbar styles */
 .scrollbar-thin::-webkit-scrollbar {
   scrollbar-width: thin;
   width: 3px;
@@ -18,8 +17,8 @@
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-/* Restore system fonts */
-body {
+/* Optional commented styles, can keep or remove */
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -31,4 +30,4 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+} */
