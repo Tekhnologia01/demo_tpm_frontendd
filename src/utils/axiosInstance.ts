@@ -1,12 +1,14 @@
 import axios from 'axios';
 
-// Create Axios instance with base URL from .env
+// Fallback to Azure backend URL if VITE_API_URL is not set
+const baseURL = import.meta.env.VITE_API_URL || 'https://tpm-backend-demo-bjgwdfdchhdmhace.centralindia-01.azurewebsites.net/';
+
 const axiosInstance = axios.create({
-  baseURL: import.meta.env.VITE_API_URL,
+  baseURL,
   headers: {
     'Content-Type': 'application/json',
   },
-  withCredentials: true, // optional: needed if using cookies/session auth
+  withCredentials: true,
 });
 
 // Request interceptor to attach token
