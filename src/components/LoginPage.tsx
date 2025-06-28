@@ -5,7 +5,7 @@ import { setUser } from '../store/authSlice';
 import axios from 'axios';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import { jwtDecode } from 'jwt-decode';
+import jwtDecode from 'jwt-decode';
 import logo from '../assets/Images/logo.svg';
 
 const LoginPage: React.FC = () => {
@@ -27,7 +27,7 @@ const LoginPage: React.FC = () => {
   const handleSubmit = async (values: typeof initialValues, { setSubmitting }: any) => {
     try {
       setGeneralError(''); // Reset previous error
-      const response = await axios.post(${import.meta.env.VITE_API_URL}/userlogin, {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/userlogin`, {
         email: values.email,
         password: values.password,
       });
@@ -92,7 +92,7 @@ const LoginPage: React.FC = () => {
                     type={showPassword ? 'text' : 'password'}
                     autoComplete="current-password"
                     required
-                    className="block w-full rounded-md bg-white px-3 py-1.5 pr-10 text-base text-gray-900 outline-1 outline-gray-300 placeholder:text-gray-400 focus:outline-indigo-600 sm:text-sm" // Added pr-10 to prevent text overlap with icon
+                    className="block w-full rounded-md bg-white px-3 py-1.5 pr-10 text-base text-gray-900 outline-1 outline-gray-300 placeholder:text-gray-400 focus:outline-indigo-600 sm:text-sm"
                   />
                   <button
                     type="button"
@@ -126,8 +126,8 @@ const LoginPage: React.FC = () => {
                     )}
                   </button>
                   <ErrorMessage name="password" component="div" className="text-red-500 text-sm mt-1" />
-                  </div>
-                  <div className="mt-2 relative">
+                </div>
+                <div className="mt-2 relative">
                   <p className="text-sm mt-2 flex justify-end">
                     <Link to="/forgot" className="font-semibold text-[#080B6C] flex justify-end">
                       Forgot password?
@@ -157,3 +157,5 @@ const LoginPage: React.FC = () => {
     </div>
   );
 };
+
+export default LoginPage;
