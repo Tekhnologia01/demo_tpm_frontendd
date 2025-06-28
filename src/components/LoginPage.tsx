@@ -53,7 +53,7 @@ const LoginPage: React.FC = () => {
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img alt="Your Company" src={logo} className="mx-auto h-10 w-auto" />
           <h2 className="mt-3 mb-10 text-center text-2xl font-bold tracking-tight text-gray-900">
-            Sign in to your account
+            Bhagyesh
           </h2>
         </div>
 
