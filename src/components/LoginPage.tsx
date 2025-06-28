@@ -5,7 +5,9 @@ import { setUser } from '../store/authSlice';
 import axios from 'axios';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import jwtDecode from 'jwt-decode';
+
+import { jwtDecode } from 'jwt-decode';
+
 import logo from '../assets/Images/logo.svg';
 
 const LoginPage: React.FC = () => {
