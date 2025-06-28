@@ -157,24 +157,3 @@ const LoginPage: React.FC = () => {
     </div>
   );
 };
-
-export default LoginPage;
-
-add this 
-In your React component (e.g., LoginPage.tsx), make sure your API calls use:
-
-ts
-Copy
-Edit
-const apiUrl = import.meta.env.REACT_APP_API_URL;
-
-axios.post(${apiUrl}/userlogin, {
-  email,
-  password,
-});
-If you're using fetch, it would look like:
-
-ts
-Copy
-Edit
-fetch(${apiUrl}/userlogin, { method: "POST", body: JSON.stringify({...}) });
