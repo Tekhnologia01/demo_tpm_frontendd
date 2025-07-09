@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Fallback to Azure backend URL if VITE_API_URL is not set
-const baseURL = import.meta.env.VITE_API_URL || 'https://tpm-backend-demo-bjgwdfdchhdmhace.centralindia-01.azurewebsites.net/';
+const baseURL = import.meta.env.VITE_API_URL || 'http://98.70.58.117:3000';
 
 const axiosInstance = axios.create({
   baseURL,
